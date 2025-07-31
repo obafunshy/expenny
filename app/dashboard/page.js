@@ -1,9 +1,21 @@
+import Login from "@/components/Login";
+import SubscriptionsDisplay from "@/components/SubscriptionsDisplay";
+import SubscriptionSummary from "@/components/SubscriptionSummary";
 
 
 export default function DashboardPage() {
-  return (
-    <div>
+    const isAuthenticated = true
 
-    </div>
-  );
+    if(!isAuthenticated) {
+        return (
+            <Login />
+        )
+    }
+
+    return (
+        <>
+            <SubscriptionSummary />
+            <SubscriptionsDisplay />
+        </>
+    );
 }
