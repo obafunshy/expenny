@@ -36,10 +36,10 @@ export default function RootLayout({ children }) {
           <div>
             <p>Facing issues? <a>Get help</a></p>
             <p>Suggestions for improvement? <a>Share feedback</a></p>
-          </div>
-          <div>
-            <Link href={'/privacy'}>Privacy Policy</Link>
-            <Link href={'/tos'}>Terms of Service</Link>
+            <div>
+              <Link href={'/privacy'}>Privacy Policy</Link>
+              <Link href={'/tos'}>Terms of Service</Link>
+            </div>
           </div>
        </div>
     </footer>

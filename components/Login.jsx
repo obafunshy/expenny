@@ -7,7 +7,7 @@ export default function Login() {
             <button>Submit</button>
             <div className="full-line" />
             <div>
-                <p>Dont&apos;t have an account?</p>
+                <p>Don&apos;t have an account?</p>
                 <button>Sign Up</button>
             </div>
         </div>

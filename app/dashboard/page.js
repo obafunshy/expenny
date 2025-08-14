@@ -4,7 +4,7 @@ import SubscriptionSummary from "@/components/SubscriptionSummary";
 
 
 export default function DashboardPage() {
-    const isAuthenticated = true
+    const isAuthenticated = false
 
     if(!isAuthenticated) {
         return (
