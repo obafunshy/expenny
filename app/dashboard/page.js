@@ -1,12 +1,19 @@
+'use client'
+
 import Login from "@/components/Login";
 import SubscriptionsDisplay from "@/components/SubscriptionsDisplay";
 import SubscriptionSummary from "@/components/SubscriptionSummary";
 import SubscriptionForm from "@/components/SubscriptionForm";
+import { useState } from "react";
 
 
 export default function DashboardPage() {
-    const isAuthenticated = true
-    const isAddEntry = true
+    const isAuthenticated = false
+    const [isAddEntry, setIsAddEntry] = useState(false)
+
+    function handleToggleInput() {
+        setIsAddEntry(!isAddEntry)
+    }
 
     if(!isAuthenticated) {
         return (
@@ -17,8 +24,10 @@ export default function DashboardPage() {
     return (
         <>
             <SubscriptionSummary />
-            <SubscriptionsDisplay />
-            {isAddEntry && <SubscriptionForm />}
+            <SubscriptionsDisplay  handleShowInput={isAddEntry ? () => {} : handleToggleInput} />
+            {isAddEntry && (
+                <SubscriptionForm onSubmit={() => {}} closeInput={handleToggleInput} />
+                )}
         </>
     );
 }

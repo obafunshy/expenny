@@ -344,6 +344,11 @@ form textarea {
   gap: 1rem;
 }
 
+/* footer  */
+footer {
+  margin-top: 2rem;
+}
+
 /* media queries  */
 
 @media (min-width: 640px) {
